@@ -1,0 +1,175 @@
+I chose csse_covid_19_time_series and dati_province as my two datasets. I will analyze dates from March 24 to March 28.
+These datasets were from these links:
+
+https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series 
+
+https://github.com/pcm-dpc/COVID-19/tree/master/dati-province
+
+csse_covid_19_time_series has 5 tables: time_series_covid19_confirmed_US, time_series_covid19_confirmed_global, time_series_covid19_deaths_US, time_series_covid19_deaths_global,
+and time_series_covid19_recovered_global. Also, this dataset gives relevant stats about covid_19 cases around the world and USA.
+
+
+
+time_series_covid19_confirmed_US tracks the number of confirmed cases in United States and gives details of the area having the confirmed cases. It contains many attributes that I cannot list.
+
+Sample records for data_by_province:   
+
+UID	iso2	iso3	code3	FIPS	Admin2	Province_State	Country_Region	Lat	Long_	Combined_Key	1/22/20	1/23/20	1/24/20	1/25/20
+16	AS	ASM	16	60		American Samoa	US	-14.271	-170.132	American Samoa, US	0	0	0	0
+316	GU	GUM	316	66		Guam	US	13.4443	144.7937	Guam, US	0	0	0	0
+580	MP	MNP	580	69		Northern Mariana Islands	US	15.0979	145.6739	Northern Mariana Islands, US	0	0	0	0
+630	PR	PRI	630	72		Puerto Rico	US	18.2208	-66.5901	Puerto Rico, US	0	0	0	0
+850	VI	VIR	850	78		Virgin Islands	US	18.3358	-64.8963	Virgin Islands, US	0	0	0	0
+84001001	US	USA	840	1001	Autauga	Alabama	US	32.53952745	-86.64408227	Autauga, Alabama, US	0	0	0	0
+
+
+time_series_covid19_confirmed_global tracks the number of confirmed cases around the world and gives details of the area having the confirmed cases. It contains many attributes that I cannot list.
+
+Sample records:
+
+Province/State	Country/Region	Lat	Long	1/22/20	1/23/20
+	Afghanistan	33	65	0	0
+	Albania	41.1533	20.1683	0	0
+	Algeria	28.0339	1.6596	0	0
+	Andorra	42.5063	1.5218	0	0
+	Angola	-11.2027	17.8739	0	0
+	Antigua and Barbuda	17.0608	-61.7964	0	0
+	Argentina	-38.4161	-63.6167	0	0
+	Armenia	40.0691	45.0382	0	0
+Australian Capital Territory	Australia	-35.4735	149.0124	0	0
+New South Wales	Australia	-33.8688	151.2093	0	0
+
+
+time_series_covid19_deaths_US tracks the number of resulting deaths from covid_19 in USA and gives details of the area having resulting deaths. It contains many attributes that I cannot list.
+
+Sample records: 
+
+UID	iso2	iso3	code3	FIPS	Admin2	Province_State	Country_Region	Lat	Long_	Combined_Key	Population	1/22/20	1/23/20
+16	AS	ASM	16	60		American Samoa	US	-14.271	-170.132	American Samoa, US	55641	0	0
+316	GU	GUM	316	66		Guam	US	13.4443	144.7937	Guam, US	164229	0	0
+580	MP	MNP	580	69		Northern Mariana Islands	US	15.0979	145.6739	Northern Mariana Islands, US	55144	0	0
+630	PR	PRI	630	72		Puerto Rico	US	18.2208	-66.5901	Puerto Rico, US	2933408	0	0
+850	VI	VIR	850	78		Virgin Islands	US	18.3358	-64.8963	Virgin Islands, US	107268	0	0
+
+
+time_series_covid19_deaths_global tracks the number of resulting deaths from covid_19 globally and gives details of the area having resulting deaths. It contains many attributes that I cannot list.
+
+Sample records:
+
+Province/State	Country/Region	Lat	Long	1/22/20	1/23/20
+	Afghanistan	33	65	0	0
+	Albania	41.1533	20.1683	0	0
+	Algeria	28.0339	1.6596	0	0
+	Andorra	42.5063	1.5218	0	0
+	Angola	-11.2027	17.8739	0	0
+	Antigua and Barbuda	17.0608	-61.7964	0	0
+	Argentina	-38.4161	-63.6167	0	0
+	Armenia	40.0691	45.0382	0	0
+Australian Capital Territory	Australia	-35.4735	149.0124	0	0
+New South Wales	Australia	-33.8688	151.2093	0	0
+
+
+time_series_covid19_recovered_global tracks the number of recovered cases from covid_19 globally and gives details of the area having resulting deaths. It contains many attributes that I cannot list.
+
+Sample records:
+
+Province/State	Country/Region	Lat	Long	1/22/20	1/23/20
+	Afghanistan	33	65	0	0
+	Albania	41.1533	20.1683	0	0
+	Algeria	28.0339	1.6596	0	0
+	Andorra	42.5063	1.5218	0	0
+	Angola	-11.2027	17.8739	0	0
+	Antigua and Barbuda	17.0608	-61.7964	0	0
+	Argentina	-38.4161	-63.6167	0	0
+	Armenia	40.0691	45.0382	0	0
+Australian Capital Territory	Australia	-35.4735	149.0124	0	0
+New South Wales	Australia	-33.8688	151.2093	0	0
+
+
+On the other hand, dati_province has 5 tables: dpc-covid-ita-province-20200324, dpc-covid-ita-province-20200325, dpc-covid-ita-province-20200326, dpc-covid-ita-province-20200327, and dpc-covid-ita-province-20200328. This dataset tracks the confirmed cases around the provinces in Italy.
+
+dpc-covid-ita-province-20200324 tallies the number of confirmed cases in numerous provinces in Italy for March 24.
+
+Sample Record:
+
+data	stato	codice_regione	denominazione_regione	codice_provincia	denominazione_provincia	sigla_provincia	lat	long	totale_casi
+2020-03-24T17:00:00	ITA	13	Abruzzo	69	Chieti	CH	42.35103167	14.16754574	133
+2020-03-24T17:00:00	ITA	13	Abruzzo	66	L'Aquila	AQ	42.35122196	13.39843823	47
+2020-03-24T17:00:00	ITA	13	Abruzzo	68	Pescara	PE	42.46458398	14.21364822	369
+2020-03-24T17:00:00	ITA	13	Abruzzo	67	Teramo	TE	42.6589177	13.70439971	140
+2020-03-24T17:00:00	ITA	13	Abruzzo	979	In fase di definizione/aggiornamento		0	0	0
+2020-03-24T17:00:00	ITA	17	Basilicata	77	Matera	MT	40.66751177	16.59792442	25
+2020-03-24T17:00:00	ITA	17	Basilicata	76	Potenza	PZ	40.63947052	15.80514834	67
+2020-03-24T17:00:00	ITA	17	Basilicata	980	In fase di definizione/aggiornamento		0	0	0
+2020-03-24T17:00:00	ITA	4	P.A. Bolzano	21	Bolzano	BZ	46.49933453	11.35662422	781
+
+
+dpc-covid-ita-province-20200325 tallies the number of confirmed cases in numerous provinces in Italy for March 25.
+
+Sample Record:
+
+data	stato	codice_regione	denominazione_regione	codice_provincia	denominazione_provincia	sigla_provincia	lat	long	totale_casi	note_it	note_en
+2020-03-25T17:00:00	ITA	13	Abruzzo	69	Chieti	CH	42.35103167	14.16754574	146		
+2020-03-25T17:00:00	ITA	13	Abruzzo	66	L'Aquila	AQ	42.35122196	13.39843823	60		
+2020-03-25T17:00:00	ITA	13	Abruzzo	68	Pescara	PE	42.46458398	14.21364822	412		
+2020-03-25T17:00:00	ITA	13	Abruzzo	67	Teramo	TE	42.6589177	13.70439971	195		
+2020-03-25T17:00:00	ITA	13	Abruzzo	979	In fase di definizione/aggiornamento		0	0	0		
+2020-03-25T17:00:00	ITA	17	Basilicata	77	Matera	MT	40.66751177	16.59792442	36		
+2020-03-25T17:00:00	ITA	17	Basilicata	76	Potenza	PZ	40.63947052	15.80514834	70		
+2020-03-25T17:00:00	ITA	17	Basilicata	980	In fase di definizione/aggiornamento		0	0	7		
+2020-03-25T17:00:00	ITA	4	P.A. Bolzano	21	Bolzano	BZ	46.49933453	11.35662422	858		
+2020-03-25T17:00:00	ITA	4	P.A. Bolzano	981	In fase di definizione/aggiornamento		0	0	0		
+2020-03-25T17:00:00	ITA	18	Calabria	79	Catanzaro	CZ	38.90597598	16.59440194	51		
+2020-03-25T17:00:00	ITA	18	Calabria	78	Cosenza	CS	39.29308681	16.25609692	99		
+2020-03-25T17:00:00	ITA	18	Calabria	101	Crotone	KR	39.08036878	17.12538864	71	
+
+
+dpc-covid-ita-province-20200326 tallies the number of confirmed cases in numerous provinces in Italy for March 26.
+
+Sample Record:	
+
+data	stato	codice_regione	denominazione_regione	codice_provincia	denominazione_provincia	sigla_provincia	lat	long	totale_casi	note_it	note_en		
+2020-03-26T17:00:00	ITA	13	Abruzzo	69	Chieti	CH	42.35103167	14.16754574	175				
+2020-03-26T17:00:00	ITA	13	Abruzzo	66	L'Aquila	AQ	42.35122196	13.39843823	64				
+2020-03-26T17:00:00	ITA	13	Abruzzo	68	Pescara	PE	42.46458398	14.21364822	445				
+2020-03-26T17:00:00	ITA	13	Abruzzo	67	Teramo	TE	42.6589177	13.70439971	262				
+2020-03-26T17:00:00	ITA	13	Abruzzo	979	In fase di definizione/aggiornamento		0	0	0				
+2020-03-26T17:00:00	ITA	17	Basilicata	77	Matera	MT	40.66751177	16.59792442	48				
+2020-03-26T17:00:00	ITA	17	Basilicata	76	Potenza	PZ	40.63947052	15.80514834	86				
+2020-03-26T17:00:00	ITA	17	Basilicata	980	In fase di definizione/aggiornamento		0	0	0				
+2020-03-26T17:00:00	ITA	4	P.A. Bolzano	21	Bolzano	BZ	46.49933453	11.35662422	906				
+2020-03-26T17:00:00	ITA	4	P.A. Bolzano	981	In fase di definizione/aggiornamento		0	0	0				
+2020-03-26T17:00:00	ITA	18	Calabria	79	Catanzaro	CZ	38.90597598	16.59440194	53				
+2020-03-26T17:00:00	ITA	18	Calabria	78	Cosenza	CS	39.29308681	16.25609692	107				
+2020-03-26T17:00:00	ITA	18	Calabria	101	Crotone	KR	39.08036878	17.12538864	80				
+
+
+dpc-covid-ita-province-20200327 tallies the number of confirmed cases in numerous provinces in Italy for March 27.
+
+Sample Record:
+
+data	stato	codice_regione	denominazione_regione	codice_provincia	denominazione_provincia	sigla_provincia	lat	long	totale_casi	note_it	note_en
+2020-03-27T17:00:00	ITA	13	Abruzzo	69	Chieti	CH	42.35103167	14.16754574	189		
+2020-03-27T17:00:00	ITA	13	Abruzzo	66	L'Aquila	AQ	42.35122196	13.39843823	75		
+2020-03-27T17:00:00	ITA	13	Abruzzo	68	Pescara	PE	42.46458398	14.21364822	476		
+2020-03-27T17:00:00	ITA	13	Abruzzo	67	Teramo	TE	42.6589177	13.70439971	277		
+2020-03-27T17:00:00	ITA	13	Abruzzo	979	In fase di definizione/aggiornamento		0	0	0		
+2020-03-27T17:00:00	ITA	17	Basilicata	77	Matera	MT	40.66751177	16.59792442	53		
+2020-03-27T17:00:00	ITA	17	Basilicata	76	Potenza	PZ	40.63947052	15.80514834	98		
+2020-03-27T17:00:00	ITA	17	Basilicata	980	In fase di definizione/aggiornamento		0	0	0		
+2020-03-27T17:00:00	ITA	4	P.A. Bolzano	21	Bolzano	BZ	46.49933453	11.35662422	1003		
+
+
+
+dpc-covid-ita-province-20200328 tallies the number of confirmed cases in numerous provinces in Italy for March 28.
+
+Sample Record:
+
+data	stato	codice_regione	denominazione_regione	codice_provincia	denominazione_provincia	sigla_provincia	lat	long	totale_casi	note_it	note_en		
+2020-03-28T17:00:00	ITA	13	Abruzzo	69	Chieti	CH	42.35103167	14.16754574	229				
+2020-03-28T17:00:00	ITA	13	Abruzzo	66	L'Aquila	AQ	42.35122196	13.39843823	88				
+2020-03-28T17:00:00	ITA	13	Abruzzo	68	Pescara	PE	42.46458398	14.21364822	512				
+2020-03-28T17:00:00	ITA	13	Abruzzo	67	Teramo	TE	42.6589177	13.70439971	304				
+2020-03-28T17:00:00	ITA	13	Abruzzo	979	In fase di definizione/aggiornamento		0	0	0				
+2020-03-28T17:00:00	ITA	17	Basilicata	77	Matera	MT	40.66751177	16.59792442	76				
+2020-03-28T17:00:00	ITA	17	Basilicata	76	Potenza	PZ	40.63947052	15.80514834	106				
