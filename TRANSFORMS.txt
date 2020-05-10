@@ -1,0 +1,14 @@
+I used SQL to transform my two datasets.
+
+CovidGlobal_modeled dataset:
+
+For some of the tables in this dataset, they have one of the attributes (Lat) as a String, which was inappropriate. So I used cast to change its datatype to Float
+
+The tables that were about global were missing the primary keys and some of the child tables were missing the foregin keys. Therefore, I used generate_uuid() to create primary keys for tables missing the primary keys. Then I used outer join between the parent table and the child table on (matching state or country ) or both null states or null countries to link the foregin keys from the parent table to the child tables.
+
+
+CovidItaly_modeled dataset:
+
+These tables have attributes in foregin language, so I created new table with these attributes in English to make it easier to read. Furthermore, I used the put the uid of Italy into the select clause of queries transforming the tables, so they can have foregin keys, which made it easier for me to create cross dataset queries.
+
+Similary, these tables lacked primary keys, so I used generate_uuid() to create ids to serve as primary keys for each of the tables.
