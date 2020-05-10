@@ -1,0 +1,8 @@
+My first query of cross_datasets would compared the number of current confirmed cases in Lombardia  on March 28, 2020, region in Italy with highest amount of COVID-19 cases to global average amount of COVID-19 cases on March 28, 2020.
+
+To achieve this result, I join ConfirmedGlobal_SQL_Final from CovidGlobal_modeled to 3_28_SQL_Final from CovidItaly_modeled on matching uid. I then used aggegrate function of sum and avg to produce desired result. Finally, I used where clause to filter out regions that are not Lombardia.
+
+
+My second query would compared the average number of confirmed cases in Lombardia from March 24, 2020 to March 28, 2020, to global peaks of deaths from COVID-19 cases from March 24, 2020 to March 28, 2020.
+
+To do this second query, I join DeathGlobal_SQL_Final from CovidGlobal_modeled to all tables from CovidItaly_modeled on mathcing uid. Again I made use of aggegrate functions and group by regions. Finally I used where clause to filter out regions that are not Lombardia.
